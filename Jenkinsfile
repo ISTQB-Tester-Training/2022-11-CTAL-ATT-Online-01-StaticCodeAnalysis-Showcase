@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+            SQ_TOKEN = credentials('Token-für-Zugriff-auf-SonarQube')
+        }
+
     stages {
         stage('Build') {
             steps {
